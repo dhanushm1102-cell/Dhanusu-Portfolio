@@ -12,7 +12,7 @@ const portfolioConfig = {
   whatsapp: "918220362115",               // digits only, with country code
   github: "https://github.com/dhanushm1102-cell",         // replace with your real GitHub username
   linkedin: "https://www.linkedin.com/in/dhanusu-m-39152132a/", // replace with your real LinkedIn username
-  resume: "C:\\Users\\dhanu\\portfolio\\assets\\Dhanusu_Resume.pdf",                            // path to your resume PDF, e.g. "resume.pdf"
+  resume: "assets/Dhanusu_Resume.pdf",                            // path to your resume PDF, e.g. "resume.pdf"
   projectsCompleted: 1                    // shown in the animated project counter
 };
 
