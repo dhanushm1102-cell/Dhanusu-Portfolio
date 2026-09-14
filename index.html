@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Dhanusu | Full Stack Developer</title>
+<meta name="description" content="Dhanusu is a Full Stack Developer and BCA student passionate about building modern, responsive and interactive web experiences.">
+<meta name="author" content="Dhanusu">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Dhanusu | Full Stack Developer">
+<meta property="og:description" content="Full Stack Developer and BCA student passionate about building modern, responsive and interactive web experiences.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/profile.jpg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ambient background particle canvas -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-name">
+      <span>D</span><span>H</span><span>A</span><span>N</span><span>U</span><span>S</span><span>U</span><span>.</span><span>M</span>
+    </div>
+    <div class="loader-role">FULL STACK DEVELOPER</div>
+    <div class="loader-bar"><div class="loader-bar-fill" id="loaderFill"></div></div>
+    <div class="loader-percent" id="loaderPercent">0%</div>
+  </div>
+</div>
+
+<!-- Custom cursor (desktop only) -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="logo-mark"></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#" id="resumeBtn" class="btn btn-outline btn-small" target="_blank" rel="noopener">Resume</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="#home" class="mobile-link active" data-section="home">Home</a>
+    <a href="#about" class="mobile-link" data-section="about">About</a>
+    <a href="#skills" class="mobile-link" data-section="skills">Skills</a>
+    <a href="#projects" class="mobile-link" data-section="projects">Projects</a>
+    <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+    <a href="#" id="resumeBtnMobile" class="btn btn-primary btn-full" target="_blank" rel="noopener">Resume</a>
+  </nav>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero-decor" aria-hidden="true">
+    <div class="grid-overlay"></div>
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="beam beam-a"></div>
+    <div class="beam beam-b"></div>
+    <div class="shape shape-tri"></div>
+    <div class="shape shape-ring"></div>
+    <div class="shape shape-square"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">HELLO, I'M</p>
+      <h1 class="hero-name" id="heroName">
+        <span class="letter">D</span><span class="letter">H</span><span class="letter">A</span><span class="letter">N</span><span class="letter">U</span><span class="letter">S</span><span class="letter">U</span><span class="letter">.</span><span class="letter">M</span>
+      </h1>
+      <h2 class="hero-role">FULL STACK DEVELOPER</h2>
+      <p class="hero-desc">
+        I build modern, responsive and interactive digital experiences by combining clean code, thoughtful UI/UX and creative technology.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span>Contact Me</span>
+        </a>
+      </div>
+
+      <div class="hero-social">
+        <a href="#" class="social-icon" data-key="email" data-tooltip="Email" aria-label="Email Dhanusu"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#" class="social-icon" data-key="whatsapp" data-tooltip="WhatsApp" target="_blank" rel="noopener" aria-label="Message Dhanusu on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="social-icon" data-key="github" data-tooltip="GitHub" target="_blank" rel="noopener" aria-label="Dhanusu's GitHub profile"><i class="fa-brands fa-github"></i></a>
+        <a href="#" class="social-icon" data-key="linkedin" data-tooltip="LinkedIn" target="_blank" rel="noopener" aria-label="Dhanusu's LinkedIn profile"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="profile-stage" id="profileStage">
+        <div class="profile-glow" aria-hidden="true"></div>
+        <div class="profile-particles" id="profileParticles" aria-hidden="true"></div>
+        <div class="profile-ring ring-1" aria-hidden="true"></div>
+        <div class="profile-ring ring-2" aria-hidden="true"></div>
+        <div class="profile-frame">
+          <img src="images/profile.png" alt="Portrait of Dhanusu, Full Stack Developer" loading="eager">
+        </div>
+        <span class="profile-tag tag-1"><i class="fa-brands fa-react"></i></span>
+        <span class="profile-tag tag-2"><i class="fa-solid fa-database"></i></span>
+        <span class="profile-tag tag-3"><i class="fa-solid fa-server"></i></span>
+        <span class="profile-tag tag-4"><i class="fa-solid fa-code"></i></span>
+        
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+    <span>SCROLL TO EXPLORE</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section about">
+  <div class="section-inner about-grid">
+    <div data-reveal="left">
+      <p class="section-eyebrow">ABOUT ME</p>
+      <h2 class="section-title">A little about who I am</h2>
+      <p class="about-text">
+        I'm Dhanusu.M, a BCA 3rd-year student and aspiring Full Stack Developer who enjoys building modern websites and interactive digital experiences. I am passionate about learning new technologies, improving my development skills and turning ideas into functional and visually engaging web applications.
+      </p>
+      <p class="about-text">
+        My interests include frontend development, backend development, UI/UX design and creative web experiences. I enjoy experimenting with modern technologies and continuously improving my skills through practical projects.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-count="1" data-suffix="+">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="5" data-suffix="+">0</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="100" data-suffix="%">0</span>
+          <span class="stat-label">Passion for Learning</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number-static">24/7</span>
+          <span class="stat-label">Curiosity</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-visual" data-reveal="right">
+      <div class="infinity-animation" aria-hidden="true">
+        <svg class="infinity-svg" viewBox="0 0 240 120" preserveAspectRatio="xMidYMid meet" focusable="false">
+          <defs>
+            <filter id="infinityGlow" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="3.2" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <linearGradient id="infinityStrokeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#6fe3ff"/>
+              <stop offset="45%" stop-color="#e4c988"/>
+              <stop offset="100%" stop-color="#6fe3ff"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Always-visible dim outline giving the symbol its base shape -->
+          <path class="infinity-path"
+                d="M60,60 C60,26 94,26 120,60 C146,94 180,94 180,60 C180,26 146,26 120,60 C94,94 60,94 60,60 Z"
+                fill="none" stroke-linecap="round"/>
+
+          <!-- Illuminated segment that continuously chases itself around the loop -->
+          <path class="infinity-glow"
+                d="M60,60 C60,26 94,26 120,60 C146,94 180,94 180,60 C180,26 146,26 120,60 C94,94 60,94 60,60 Z"
+                fill="none" stroke="url(#infinityStrokeGradient)" stroke-linecap="round"
+                pathLength="100" filter="url(#infinityGlow)"/>
+
+          <!-- Bright point of light riding at the head of the trail -->
+          <circle class="infinity-particle" r="3.2" filter="url(#infinityGlow)">
+            <animateMotion dur="5s" repeatCount="indefinite" rotate="auto"
+              path="M60,60 C60,26 94,26 120,60 C146,94 180,94 180,60 C180,26 146,26 120,60 C94,94 60,94 60,60 Z"/>
+          </circle>
+
+          <!-- A few extremely subtle floating motes near the path -->
+          <circle class="infinity-mote mote-1" cx="72" cy="38" r="1"/>
+          <circle class="infinity-mote mote-2" cx="168" cy="82" r="0.9"/>
+          <circle class="infinity-mote mote-3" cx="122" cy="28" r="0.8"/>
+          <circle class="infinity-mote mote-4" cx="118" cy="93" r="0.9"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section skills">
+  <div class="section-inner">
+    <div class="section-head" data-reveal="up">
+      <p class="section-eyebrow">MY SKILLS</p>
+      <h2 class="section-title">Technologies and tools I use to build digital experiences.</h2>
+    </div>
+
+    <div class="orbit-wrap" data-reveal="up">
+      <div class="orbit-stage" id="orbitStage">
+        <div class="orbit-arc" aria-hidden="true"></div>
+        <div class="orbit-hub" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+        <!-- Skill icons are generated by script.js and positioned continuously around this arc -->
+        <div class="orbit-icons" id="orbitIcons"></div>
+        <span class="orbit-name" id="orbitName">HTML5</span>
+      </div>
+    </div>
+
+    <div class="skills-cards">
+      <div class="skill-card" data-reveal="up">
+        <div class="skill-card-icon"><i class="fa-brands fa-html5"></i></div>
+        <h3>HTML5</h3>
+        <p>Semantic and structured web development.</p>
+        <div class="skill-progress"><span data-level="68"></span></div>
+        <span class="skill-tag">Intermediate</span>
+      </div>
+      <div class="skill-card" data-reveal="up">
+        <div class="skill-card-icon"><i class="fa-brands fa-css3-alt"></i></div>
+        <h3>CSS3</h3>
+        <p>Responsive layouts, animations and modern UI styling.</p>
+        <div class="skill-progress"><span data-level="65"></span></div>
+        <span class="skill-tag">Intermediate</span>
+      </div>
+      <div class="skill-card" data-reveal="up">
+        <div class="skill-card-icon"><i class="fa-brands fa-js"></i></div>
+        <h3>JavaScript</h3>
+        <p>Interactive and dynamic web experiences.</p>
+        <div class="skill-progress"><span data-level="50"></span></div>
+        <span class="skill-tag">Growing</span>
+      </div>
+      <div class="skill-card" data-reveal="up">
+        <div class="skill-card-icon"><i class="fa-brands fa-python"></i></div>
+        <h3>Python</h3>
+        <p>Programming, logic and backend fundamentals.</p>
+        <div class="skill-progress"><span data-level="48"></span></div>
+        <span class="skill-tag">Growing</span>
+      </div>
+      <div class="skill-card" data-reveal="up">
+        <div class="skill-card-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Creating clean, intuitive and user-focused interfaces.</p>
+        <div class="skill-progress"><span data-level="34"></span></div>
+        <span class="skill-tag">Learning</span>
+      </div>
+      <div class="skill-card" data-reveal="up">
+        <div class="skill-card-icon"><i class="fa-brands fa-java"></i></div>
+        <h3>Java</h3>
+        <p>Object-oriented programming and core application logic.</p>
+        <div class="skill-progress"><span data-level="42"></span></div>
+        <span class="skill-tag">Growing</span>
+      </div>
+      <div class="skill-card" data-reveal="up">
+        <div class="skill-card-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>C++</h3>
+        <p>Data structures, algorithms and problem-solving fundamentals.</p>
+        <div class="skill-progress"><span data-level="38"></span></div>
+        <span class="skill-tag">Learning</span>
+      </div>
+    </div>
+
+    <div class="tools-row" data-reveal="up">
+      <span class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+      <span class="tool-chip"><i class="fa-brands fa-github"></i> GitHub</span>
+      <span class="tool-chip"><i class="fa-solid fa-database"></i> SQL</span>
+      <span class="tool-chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
+      <span class="tool-chip"><i class="fa-brands fa-react"></i> React</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section projects">
+  <div class="section-inner">
+    <div class="section-head" data-reveal="up">
+      <p class="section-eyebrow">MY PROJECTS</p>
+      <h2 class="section-title">Some of the things I've built.</h2>
+      <div class="project-counter">
+        <span class="counter-number" data-count="3">0</span>
+        <span class="counter-label">+ PROJECTS COMPLETED</span>
+      </div>
+    </div>
+
+    <div class="filter-row" data-reveal="up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="uiux">UI/UX</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card featured" data-cats="web fullstack" data-reveal="up">
+        <div class="project-media">
+          <img src="images/project-buildora.png" alt="Screenshot of The Buildora construction materials website" loading="lazy">
+          <span class="project-badge">Featured Project</span>
+        </div>
+        <div class="project-body">
+          <p class="project-category">Construction Materials Website</p>
+          <h3>THE BUILDORA</h3>
+          <p class="project-desc">A modern construction materials supply website designed to provide a simple and attractive experience for customers looking for sand and stone chips.</p>
+          <ul class="project-features">
+            <li>Material &amp; sand type selection</li>
+            <li>Stone chips selection</li>
+            <li>Unit selection &amp; order summary</li>
+            <li>Customer details form</li>
+            <li>WhatsApp order integration</li>
+            <li>Fully responsive design</li>
+          </ul>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python + Flask</span><span>MongoDB</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cats="uiux web" data-reveal="up">
+        <div class="project-media">
+          <img src="images/project-2.png" alt="Screenshot of project two" loading="lazy">
+        </div>
+        <div class="project-body">
+          <p class="project-category"></p>
+          <h3>Material selection page</h3>
+          <p class="project-desc">Developed a simple Blue Materials Selection page to browse and select different types of sand and stone materials.
+Designed an easy-to-use interface for quick and convenient material selection.</p>
+          <div class="project-tags">
+            <span>Material Category</span><span>Material & QuantitySelection</span><span>Order List Review</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-cats="fullstack web" data-reveal="up">
+        <div class="project-media">
+          <img src="images/project-3.png" alt="Screenshot of project three" loading="lazy">
+        </div>
+        <div class="project-body">
+          <p class="project-category"></p>
+          <h3>Customer Details Page</h3>
+          <p class="project-desc">Developed a Customer Details page to collect and validate customer information.
+Integrated the page with MongoDB to securely store customer details and order data.</p>
+          <div class="project-tags">
+            <span>Customer Information</span><span>Form Validation</span><span>Store DataBase</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section contact">
+  <div class="section-inner">
+    <div class="section-head" data-reveal="up">
+      <p class="section-eyebrow">GET IN TOUCH</p>
+      <h2 class="section-title">LET'S WORK TOGETHER</h2>
+      <p class="contact-text">Have an idea, project or opportunity? Let's connect and build something meaningful.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-icons-wrap" data-reveal="left">
+        <a href="#" class="contact-icon-btn" data-key="email" aria-label="Email Dhanusu" data-tooltip="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="#" class="contact-icon-btn" data-key="whatsapp" target="_blank" rel="noopener" aria-label="Message Dhanusu on WhatsApp" data-tooltip="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#" class="contact-icon-btn" data-key="github" target="_blank" rel="noopener" aria-label="Dhanusu's GitHub profile" data-tooltip="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="#" class="contact-icon-btn" data-key="linkedin" target="_blank" rel="noopener" aria-label="Dhanusu's LinkedIn profile" data-tooltip="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+
+      <form class="contact-form" id="contactForm" data-reveal="right" novalidate>
+        <div class="form-row">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your name" required>
+          <span class="field-error" id="err-fullName"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <span class="field-error" id="err-email"></span>
+        </div>
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          <span class="field-error" id="err-message"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span>SEND MESSAGE</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner section-inner footer-inner--simple">
+    <div class="footer-brand">
+      <h3><span class="logo-mark"></span>DHANUSU.M</h3>
+      <p class="footer-role">FULL STACK DEVELOPER</p>
+      <p class="footer-tag">Building ideas into interactive digital experiences.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Dhanusu.M. All Rights Reserved.</p>
+    <p>Designed &amp; Built by Dhanusu.M</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
